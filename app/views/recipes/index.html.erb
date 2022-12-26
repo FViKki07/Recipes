@@ -1,0 +1,5 @@
+<h2>Рецепты</h2>
+
+<% @recipes.each do |recipe| %>
+  <p><%= link_to "Рецепт #{recipe.id}", recipe_path(recipe) %><p>  
+<% end %>  
