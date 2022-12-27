@@ -9,6 +9,17 @@
 
 }
 
+.button_nick{
+    border: 0;
+    border-radius: 3px;
+    color: #800000;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 13px 7px;
+    text-decoration: underline;
+    
+}
+
 .button-main{
     background-color: #e91a1a;
 }

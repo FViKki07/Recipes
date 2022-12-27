@@ -6,23 +6,17 @@ class UsersController < ApplicationController
 
   def create
     user_params = params.require(:user).permit(:name, :login, :password)
-    @user = User.find_by(login: user_params[:login])
+    #@user = User.find_by(login: user_params[:login])
+    @user = User.new(user_params)
 
     if @user.save
       redirect_to root_path, notice: 'Вы успешно зарегистрировались!'
     else
       flash.now[:alert] = 'Неправильно заполнили форму регистрации'
-      
+      #redirect_to "/users/new", notice: 'Неправильно заполнили форму регистрации'
+      #render "new", status: :unprocessable_entity
       render :new
     end
-    #if user.present?
-     # flash.now[:alert] = 'Такой логин уже есть на сайте'
-      # redirect_to '/users/new'
-     # redirect_to 
-    #else
-      #User.create(user_params)
-      #redirect_to root_path, notice: 'Вы успешно зарегистрировались!'
-    #end
   end
 
   def edit
@@ -48,5 +42,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :login, :password)
+  end
+
+  def show 
+    @user = User.find(params[:id])
+
   end
 end
