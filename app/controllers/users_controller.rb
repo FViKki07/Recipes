@@ -24,6 +24,15 @@ class UsersController < ApplicationController
     
   end
   
+  def destroy 
+    @user = User.find(params[:id])
+    @user.destroy
+
+    session.delete(:user_id)
+    redirect_to root_path, notice: 'Пользователь удален' 
+
+  end
+
   def user_params
     params.require(:user).permit(:name, :login, :password)
   end
