@@ -1,0 +1,11 @@
+<div class="container">
+<h2 class="title-lg mb" >Рецепты</h2>
+
+<% @recipes.each do |recipe| %>
+  <p class="mb-sm"><%= link_to "Рецепт #{recipe.id}", recipe_path(recipe) %><p>  
+<% end %>  
+
+<p class="mt">
+  <%= link_to "Создать новый рецепт", new_recipe_path, class: "button button-main" %>
+<p>  
+</div>
