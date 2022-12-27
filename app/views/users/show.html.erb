@@ -1,0 +1,13 @@
+<div class="container">
+<h2 class="title-lg mb" >Профиль</h2>
+
+    <p class="mr-sm">
+        <%= "@#{current_user.name}" %>
+    
+    <p>
+
+    <div class="mt">
+        <%= link_to fa_icon('pencil'), edit_user_path(@user), title: "Изменить профиль" %></p>
+        <%= button_to fa_icon('trash-o'), user_path(@user), method: :destroy, title: "Удалить профиль" %>
+    </div>
+</div>
