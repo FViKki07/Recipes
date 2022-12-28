@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
   def create
     recipe = Recipe.create(recipe_params)  
 
-    redirect_to recipe_path(recipe)
+    redirect_to recipe_path(recipe), notice: "Рецепт добавлен"
   end 
   
   def update

@@ -1,0 +1,14 @@
+<div class="mb-sm">
+  <%= recipe.title %>
+</div>
+
+<div class="text-sm recipe-footer">
+  <div class="mb-sm">
+    <%= recipe.body %>
+  </div>
+
+  <div>
+    <%= link_to fa_icon('pencil'), edit_recipe_path(recipe), title: "Изменить рецепт" %>
+    <%= button_to fa_icon('trash-o'), recipe_path(recipe), method: :delete, title: "Удалить рецепт" %>
+  </div>
+</div>
