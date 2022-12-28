@@ -2,7 +2,8 @@
         <div>
             <% if current_user.present? %>
                 <div align="right" class = "mb-lg">
-                    <%= content_tag 'span' ,"@#{current_user.name}", class: 'mr-sm' %>
+           
+                 <%= link_to "@#{current_user.name}", user_path(id: current_user.id), class: 'button_nick' %>
                     <%= button_to 'Выйти', session_path, method: :delete, class: 'button button-user' %>
                 </div>
             <% else %>
@@ -17,4 +18,19 @@
 
     <h2 class="title-lg mb">Добро пожаловать на наш сайт!!<br>  
         Здесь вы найдете лучшие рецепты!!</h2>
+
+    <div class="container">
+        <p class="mt">
+            <%= link_to "Добавить рецепт", new_recipe_path, class: "button button-main" %>
+        <p>  
+    </div>
+
+    <div class="container mt-sm">
+        <h2 class="title-lg" >Все рецепты</h2>
+        <% @recipes.each do |recipe| %>
+            <div class="mt-sm container">
+                <%= render recipe%>
+            </div>
+        <% end %>  
+</div>
 </div>

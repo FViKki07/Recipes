@@ -2,16 +2,24 @@
     <h2 class="title">Присоединяйся!</h2>
 
     <div class="mt">
-        <%= form_with model: @user do |form| %>
+        <%= form_with model: @user, data: {turbo: false} do |form| %>
             <p class= "mt"><%= form.label :name, 'Ваше имя' %></p>
             <p><%= form.text_field :name, class: 'form-text-field'%></p>
-            
+            <% @user.errors.full_messages_for(:name).each do |message| %>
+                <p class = "mb-sm text-red"><%= message %></p>
+            <% end %>
+
             <p class="mt"><%= form.label :login, 'Ваша почта' %></p>
             <p><%= form.text_field :login, class: 'form-text-field' %></p>
+            <% @user.errors.full_messages_for(:login).each do |message| %>
+                <p class = "mb-sm text-red"><%= message %></p>
+            <% end %>
 
             <p class="mt"><%= form.label :password %></p>
             <p><%= form.password_field :password, class: 'form-text-field' %></p>
-
+            <% @user.errors.full_messages_for(:password).each do |message| %>
+                <p class = "mb-sm text-red"><%= message %></p>
+            <% end %>   
             <p class ="mt-lg"><%= form.submit 'Зарегистрироваться', class: 'button button-user' %></p>
         <% end %>        
     </div>
