@@ -26,5 +26,3 @@
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Kosten-73)](https://git.io/streak-stats)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
-
-[![Ashutosh's github activity graph](https://activity-graph.herokuapp.com/graph?username=Kosten-73)](https://github.com/ashutosh00710/github-readme-activity-graph)
