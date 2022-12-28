@@ -11,6 +11,9 @@ class UsersController < ApplicationController
 
     if @user.save
       redirect_to root_path, notice: 'Вы успешно зарегистрировались!'
+      user = User.find_by(login: user_params[:login])&.authenticate(user_params[:password])
+      session[:user_id] = user.id
+      
     else
       flash.now[:alert] = 'Неправильно заполнили форму регистрации'
       #redirect_to "/users/new", notice: 'Неправильно заполнили форму регистрации'
