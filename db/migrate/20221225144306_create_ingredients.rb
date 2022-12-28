@@ -1,8 +1,8 @@
 class CreateIngredients < ActiveRecord::Migration[7.0]
   def change
     create_table :ingredients do |t|
-      t.integer :id_rec
-      t.integer :id_prod
+      t.belongs_to :recipe
+      t.belongs_to :product
       t.float :count
       t.string :measure
 
