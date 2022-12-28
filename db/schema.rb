@@ -10,19 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_25_134359) do
-  
+ActiveRecord::Schema[7.0].define(version: 2022_12_25_144306) do
+  create_table "ingredients", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "product_id"
+    t.float "count"
+    t.string "measure"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_ingredients_on_product_id"
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.float "density"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-  create_table "ingredients", force: :cascade do |t|
-    t.integer "id_rec"
-    t.integer "id_prod"
-    t.float "count"
-    t.string "measure"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,9 +32,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_25_134359) do
   create_table "recipes", force: :cascade do |t|
     t.string "title"
     t.text "body"
-    t.integer "user"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

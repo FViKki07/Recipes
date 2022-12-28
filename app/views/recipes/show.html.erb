@@ -1,8 +1,10 @@
 <div class="container">
   <h2 class="title-lg" mb>Рецепт <%= @recipe.title %></h2>
 
-  <p class="mb-sm"><%= @recipe.body%></p>
-  <p class="mb-sm"><%= @recipe.user%></p>
+  <p class="mt">Ингридиенты:<br>
+    <p class="mr"><%= @recipe.body%></p>
+  </p>
+  <p class="mb-sm">Создатель: <%= @recipe.user_id%></p>
 
   <div class="mt">
     <%= link_to fa_icon('pencil'), edit_recipe_path(@recipe), title: "Изменить рецепт" %></p>

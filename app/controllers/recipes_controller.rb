@@ -35,7 +35,7 @@ class RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.require(:recipe).permit(:title, :body, :user)
+    params.require(:recipe).permit(:title, :body, :user_id)
   end
 
   def set_recipe
