@@ -1,28 +1,24 @@
 # README
 
-Сайт для помощи в приготовление различных блюд и рецептом, он поможет не только ***домохозяйкам***, но и самым известным ***шеф-поварам*** на всем свете
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Проект разработан специалистами-студентами из ЮФУ ИММиКН:
+Things you may want to cover:
 
-+ Виктория Филатова
+* Ruby version
 
-+ Алина Ковалева
+* System dependencies
 
-+ Анастасия Дубинская 
+* Configuration
 
-+ Константин Дмитриевич
+* Database creation
 
-## Самые важные версии 
+* Database initialization
 
-* Ruby version 5.0.4
+* How to run the test suite
 
-* ruby on rails version 7.0.4
+* Services (job queues, cache servers, search engines, etc.)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Computer+science+student)](https://git.io/typing-svg)
+* Deployment instructions
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Kosten-73)](https://github.com/anuraghazra/github-readme-stats)
-
-
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Kosten-73)](https://git.io/streak-stats)
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
+* ...
