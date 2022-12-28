@@ -19,6 +19,10 @@ a, button {
   font-size: 125%;
 }
 
+.text-red{
+  color: darkred;
+}
+
 .tetx-sm{
   font-size: 80%;
 }
