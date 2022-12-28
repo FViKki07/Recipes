@@ -26,3 +26,5 @@
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Kosten-73)](https://git.io/streak-stats)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
+
+![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=daniilshat&theme=solarized_dark)
