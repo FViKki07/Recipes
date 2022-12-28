@@ -20,9 +20,15 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Computer+science+student)](https://git.io/typing-svg)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Kosten-73)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=FViKki07)](https://github.com/anuraghazra/github-readme-stats)
 
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Kosten-73)](https://git.io/streak-stats)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=FViKki07)](https://git.io/streak-stats)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
+
+![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Kosten-73&theme=solarized_dark)
+
+![Jokes Card](https://readme-jokes.vercel.app/api)
+
+https://platane.github.io/snk/
