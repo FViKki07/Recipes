@@ -1,14 +1,11 @@
 <div class="container">
-<p class="mt">
-  <%= link_to "Добавить рецепт", new_recipe_path, class: "button button-main" %>
-<p>  
-</div>
+<h2 class="title-lg mb" >Рецепты</h2>
 
-<div class="container mt-sm">
-  <h2 class="title-lg" >Все рецепты</h2>
-  <% @recipes.each do |recipe| %>
-    <div class="mt-sm container">
-      <%= render recipe%>
-    </div>
-  <% end %>  
+<% @recipes.each do |recipe| %>
+  <p class="mb-sm"><%= link_to "Рецепт #{recipe.id}", recipe_path(recipe) %><p>  
+<% end %>  
+
+<p class="mt">
+  <%= link_to "Создать новый рецепт", new_recipe_path, class: "button button-main" %>
+<p>  
 </div>
