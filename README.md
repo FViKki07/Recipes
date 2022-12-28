@@ -28,3 +28,5 @@
 [![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
 
 ![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Kosten-73&theme=solarized_dark)
+
+![Jokes Card](https://readme-jokes.vercel.app/api)
