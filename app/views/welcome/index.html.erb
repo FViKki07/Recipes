@@ -14,17 +14,19 @@
             <% end %>
         </div>    
       </div>
+
 <div class="container">
 
     <h2 class="title-lg mb">Добро пожаловать на наш сайт!!<br>  
         Здесь вы найдете лучшие рецепты!!</h2>
 
-    <div class="container mt-sm">
+</div>
+
+<div class="container mt-sm">
         <h2 class="title-lg" >Все рецепты</h2>
         <% @recipes.each do |recipe| %>
             <div class="mt-sm container">
                 <%= render recipe%>
             </div>
         <% end %>  
-</div>
-</div>
+    </div>

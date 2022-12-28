@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: %i[update show destroy edit]
   def new
     session[:current_time] = Time.now
     @user = User.new
   end
 
   def create
-    user_params = params.require(:user).permit(:name, :login, :password)
     #@user = User.find_by(login: user_params[:login])
     @user = User.new(user_params)
 
@@ -23,57 +23,30 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
-
     @user = User.update(user_params)
     redirect_to root_path, notice: 'Данные пользователя обновлены'
-    
   end
   
   def destroy 
-    @user = User.find(params[:id])
     @user.destroy
 
     session.delete(:user_id)
     redirect_to root_path, notice: 'Пользователь удален' 
 
-  end
-
-  def user_params
-    params.require(:user).permit(:name, :login, :password)
   end
 
   def show 
-    @user = User.find(params[:id])
-
   end
 
-  def edit
-    @user = User.find(params[:id])
-  end
-
-  def update
-    @user = User.find(params[:id])
-
-    @user = User.update(user_params)
-    redirect_to root_path, notice: 'Данные пользователя обновлены'
-    
-  end
-  
-  def destroy 
-    @user = User.find(params[:id])
-    @user.destroy
-
-    session.delete(:user_id)
-    redirect_to root_path, notice: 'Пользователь удален' 
-
-  end
-
+  private
   def user_params
     params.require(:user).permit(:name, :login, :password)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end
