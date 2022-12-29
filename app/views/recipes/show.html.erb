@@ -7,7 +7,7 @@
   <p class="mb-sm">Создатель: <%= @user.name%></p>
 
   <div class="mt">
-    <%= link_to fa_icon('pencil'), edit_recipe_path(@recipe), title: "Редактировать рецепт" %></p>
+    <%= link_to fa_icon('pencil'), edit_recipe_path(@recipe), title: "Редактировать рецепт" %>
     <%= button_to fa_icon('trash-o'), recipe_path(@recipe), method: :delete, title: "Удалить рецепт" %>
   </div>
 

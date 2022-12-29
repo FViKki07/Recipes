@@ -26,7 +26,15 @@
         <h2 class="title-lg" >Все рецепты</h2>
         <% @recipes.each do |recipe| %>
             <div class="mt-sm container">
-                <%= render recipe%>
+                <% if current_user.present? %>
+                    <p class="mt"><%= link_to "#{recipe.title}",recipe_path(recipe.id)%></p>
+                    <%= render recipe%>
+                <% else %>
+                    <div class="mb-sm">
+                         <%= recipe.title %>
+                    </div>
+                    <%= render recipe%>
+                <% end %>
             </div>
         <% end %>  
     </div>
