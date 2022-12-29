@@ -2,9 +2,14 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[update show destroy edit]
 
   def create
-    recipe = Recipe.create(recipe_params)  
-
-    redirect_to recipe_path(recipe), notice: "Рецепт добавлен"
+    @recipe = Recipe.create(recipe_params)  
+    if @recipe.save
+      redirect_to root_path, notice: "Рецепт добавлен"
+      
+    else
+      flash.now[:alert] = 'Неправильно заполнили рецепты'
+      render :new
+    end
   end 
   
   def update

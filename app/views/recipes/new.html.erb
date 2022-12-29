@@ -1,13 +1,18 @@
 <div class="container">
 <h2 class="title-lg" > Новый рецепт</h2>
 
- <%= form_with model: @recipe do |form| %>
+ <%= form_with model: @recipe, data: {turbo: false} do |form| %>
     <p class= "mt"><%= form.label :title, 'Название рецепта' %></p>
     <p><%= form.text_area :title, rows: 3, class: "form-text-area" %></p>
-            
+    <% @recipe.errors.full_messages_for(:title).each do |message| %>
+        <p class = "mb-sm text-red"><%= message %></p>
+    <% end %>
+
     <p class="mt"><%= form.label :body, 'Содержание рецепта' %></p>
     <p><%= form.text_area :body, rows: 5, class: "form-text-area" %></p>
-
+    <% @recipe.errors.full_messages_for(:body).each do |message| %>
+        <p class = "mb-sm text-red"><%= message %></p>
+    <% end %>
     
 
     <p class ="mt-lg"><%= form.submit 'Создать', class: "button button-main" %></p>

@@ -16,8 +16,6 @@ class UsersController < ApplicationController
       
     else
       flash.now[:alert] = 'Неправильно заполнили форму регистрации'
-      #redirect_to "/users/new", notice: 'Неправильно заполнили форму регистрации'
-      #render "new", status: :unprocessable_entity
       render :new
     end
   end
