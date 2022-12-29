@@ -14,23 +14,19 @@
             <% end %>
         </div>    
       </div>
+
 <div class="container">
 
     <h2 class="title-lg mb">Добро пожаловать на наш сайт!!<br>  
         Здесь вы найдете лучшие рецепты!!</h2>
 
-    <div class="container">
-        <p class="mt">
-            <%= link_to "Добавить рецепт", new_recipe_path, class: "button button-main" %>
-        <p>  
-    </div>
+</div>
 
-    <div class="container mt-sm">
+<div class="container mt-sm">
         <h2 class="title-lg" >Все рецепты</h2>
         <% @recipes.each do |recipe| %>
             <div class="mt-sm container">
                 <%= render recipe%>
             </div>
         <% end %>  
-</div>
-</div>
+    </div>

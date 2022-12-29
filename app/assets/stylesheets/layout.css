@@ -11,7 +11,9 @@ body{
 }
 
 .container{
-    background: #fff;
+    border: 0;
+    border-radius: 10px;
+    background: #f4f1ec;
 }
 
 .container, .navbar {

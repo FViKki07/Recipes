@@ -1,4 +1,4 @@
-<div class="mb-sm">
+<div class="mb-sm title">
   <%= recipe.title %>
 </div>
 
@@ -8,7 +8,7 @@
   </div>
 
   <div>
-    <%= link_to fa_icon('pencil'), edit_recipe_path(recipe), title: "Изменить рецепт" %>
+    <%= link_to fa_icon('pencil'), edit_recipe_path(recipe), title: "Редактировать рецепт" %>
     <%= button_to fa_icon('trash-o'), recipe_path(recipe), method: :delete, title: "Удалить рецепт" %>
   </div>
 </div>
